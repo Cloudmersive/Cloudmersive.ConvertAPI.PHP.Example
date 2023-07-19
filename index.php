@@ -13,7 +13,7 @@ $apiInstance = new Swagger\Client\Api\ConvertDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$input_file = "/home/adm101/Cloudmersive.ConvertApi.Php.Example/test.xlsx"; // \SplFileObject | Input file to perform the operation on.
+$input_file = "/home/adm101/Cloudmersive.ConvertAPI.PHP.Example/test.xlsx"; // \SplFileObject | Input file to perform the operation on.
 $output_encoding = "UTF-8";
 
 try {
