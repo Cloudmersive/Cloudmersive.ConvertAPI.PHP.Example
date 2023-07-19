@@ -7,16 +7,17 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Ap
 
 
 
-$apiInstance = new Swagger\Client\Api\ScanApi(
+$apiInstance = new Swagger\Client\Api\ConvertDocumentApi(
     
     
     new GuzzleHttp\Client(),
     $config
 );
-$input_file = "C:\\temp\\invoice_diag28.png"; // \SplFileObject | Input file to perform the operation on.
+$input_file = "C:\\temp\\input.csv"; // \SplFileObject | Input file to perform the operation on.
+$output_encoding = "UTF-8";
 
 try {
-    $result = $apiInstance->scanFile($input_file);
+    $result = $apiInstance->convertDocumentXlsxToCsv($input_file, $output_encoding);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScanApi->scanFile: ', $e->getMessage(), PHP_EOL;
